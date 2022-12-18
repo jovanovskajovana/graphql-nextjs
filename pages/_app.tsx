@@ -1,6 +1,24 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { AppProps } from 'next/app';
+import withApollo from 'next-with-apollo';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import Page from '../components/Page';
+interface WithApolloProps<Cache> extends AppProps {
+  apollo: ApolloClient<Cache>;
 }
+
+const App = ({ Component, pageProps, apollo }: WithApolloProps<Cache>) => (
+  <ApolloProvider client={apollo}>
+    <Page>
+      <Component {...pageProps} />
+    </Page>
+  </ApolloProvider>
+);
+
+export default withApollo(
+  ({ initialState }) =>
+    new ApolloClient({
+      uri: process.env.NEXT_PUBLIC_API_URL,
+      cache: new InMemoryCache().restore(initialState || {}),
+    })
+)(App);
