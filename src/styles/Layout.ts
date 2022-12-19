@@ -14,6 +14,7 @@ interface ContainerProps {
   column?: boolean;
   alignItems?: string;
   justifyContent?: string;
+  gap?: string;
   maxWidth?: string;
   mobileColumn?: boolean;
   mobileJustifyContent?: string;
@@ -25,6 +26,7 @@ export const Container = styled.div<ContainerProps>`
   flex-direction: ${({ column }) => (column ? 'column' : 'row')};
   justify-content: ${({ justifyContent }) => justifyContent};
   align-items: ${({ alignItems }) => alignItems};
+  gap: ${({ gap }) => gap};
   max-width: ${({ maxWidth }) => maxWidth ?? '1400px'};
   width: 100%;
   margin: 0 auto;

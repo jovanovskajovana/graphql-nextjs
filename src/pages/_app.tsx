@@ -2,12 +2,13 @@ import { AppProps } from 'next/app';
 import withApollo from 'next-with-apollo';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
-import Page from '../components/Page';
-interface WithApolloProps<Cache> extends AppProps {
+import Page from '../components/page/Page';
+
+interface WithApolloProps extends AppProps {
   apollo: ApolloClient<Cache>;
 }
 
-const App = ({ Component, pageProps, apollo }: WithApolloProps<Cache>) => (
+const App = ({ Component, pageProps, apollo }: WithApolloProps) => (
   <ApolloProvider client={apollo}>
     <Page>
       <Component {...pageProps} />

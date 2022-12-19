@@ -7,7 +7,7 @@ interface SEOProps {
 }
 
 /**
- * An SEO handler that gets data from each page
+ * A SEO handler that gets data from each page
  * and assigns it to the Head.
  */
 const SEO: FC<SEOProps> = ({ title, description }) => (

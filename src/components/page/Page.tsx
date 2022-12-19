@@ -1,12 +1,12 @@
 import React, { FC, PropsWithChildren } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { theme } from '../constants/theme';
+import { theme } from '../../constants/theme';
 
-import GlobalStyles from '../styles/GlobalStyles';
-import { PageLayout } from '../styles/Layout';
+import GlobalStyles from '../../styles/GlobalStyles';
+import { PageLayout } from '../../styles/Layout';
 
-import SEO from './SEO';
+import SEO from '../seo/SEO';
 
 /**
  * The page layout including all global styles and theme provider,
