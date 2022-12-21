@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { breakpoints } from '../../constants/breakpoints';
 
-export const HomeStyled = styled.div`
+const HomeStyled = styled.div`
   width: 100%;
   padding: 2.5rem 2rem;
 
@@ -20,3 +20,5 @@ export const HomeStyled = styled.div`
     }
   }
 `;
+
+export default HomeStyled

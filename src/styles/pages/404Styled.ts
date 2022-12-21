@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const NotFoundStyled = styled.div`
+const NotFoundStyled = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
@@ -10,3 +10,5 @@ export const NotFoundStyled = styled.div`
     text-align: center;
   }
 `;
+
+export default NotFoundStyled

@@ -24,7 +24,7 @@ export const Item: FC<ItemProps> = ({ ship }) => {
     <ItemStyled bgImage={ship.image}>
       <div className="cover" />
       <div className="content">
-        <div className="text">
+        <div className="info">
           <BodyM weight={700}>{ship.name}</BodyM>
           <BodyS color={theme.textSecondary}>{ship.type}</BodyS>
         </div>

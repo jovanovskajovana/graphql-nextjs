@@ -4,7 +4,7 @@ import List from '../components/list/List';
 
 import { Container } from '../styles/Layout';
 import { Title } from '../styles/Typography';
-import { HomeStyled } from '../styles/pages/HomeStyled';
+import HomeStyled from '../styles/pages/HomeStyled';
 
 export const Home: FC = () => (
   <HomeStyled>

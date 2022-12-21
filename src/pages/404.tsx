@@ -6,7 +6,7 @@ import ArrowLeft from '../components/icons/ArrowLeft';
 
 import { Container } from '../styles/Layout';
 import { Title, BodyM } from '../styles/Typography';
-import { NotFoundStyled } from '../styles/pages/404Styled';
+import NotFoundStyled from '../styles/pages/404Styled';
 
 export const NotFound: FC = () => {
   const theme = useTheme();
