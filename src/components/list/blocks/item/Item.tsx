@@ -1,9 +1,12 @@
 import { FC } from 'react';
 import { useTheme } from 'styled-components';
 
-import { Ship } from '../../../../constants/interfaces';
+import ArrowRight from '../../../icons/ArrowRight';
 
-import { BodyM, Title } from '../../../../styles/Typography';
+import { Ship } from '../../../../interfaces/data';
+
+import { BodyM, BodyS } from '../../../../styles/Typography';
+import { Button } from '../../../../styles/Button';
 
 import { ItemStyled } from './Item.styled';
 
@@ -18,10 +21,17 @@ export const Item: FC<ItemProps> = ({ ship }) => {
   const theme = useTheme();
 
   return (
-    <ItemStyled>
-      <img src={ship.image} alt={ship.name} />
-      <Title>{ship.name}</Title>
-      <BodyM color={theme.textSecondary}>{ship.type}</BodyM>
+    <ItemStyled bgImage={ship.image}>
+      <div className="cover" />
+      <div className="content">
+        <div className="text">
+          <BodyM weight={700}>{ship.name}</BodyM>
+          <BodyS color={theme.textSecondary}>{ship.type}</BodyS>
+        </div>
+        <Button>
+          <ArrowRight />
+        </Button>
+      </div>
     </ItemStyled>
   );
 };

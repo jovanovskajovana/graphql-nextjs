@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 import { SHIP_DETAILS_QUERY } from '../../api/queries';
 
-import { ShipDetails } from '../../constants/interfaces';
+import { ShipDetails } from '../../interfaces/data';
 
 import { Container } from '../../styles/Layout';
 import { Title } from '../../styles/Typography';

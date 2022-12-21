@@ -4,7 +4,10 @@ import { useQuery } from '@apollo/client';
 
 import { SHIPS_QUERY } from '../../api/queries';
 
-import { Ships } from '../../constants/interfaces';
+import { Ships } from '../../interfaces/data';
+
+import { Loader } from '../../styles/Loader';
+import { Title } from '../../styles/Typography';
 
 import Item from './blocks/item/Item';
 import { ListStyled } from './List.styled';
@@ -16,27 +19,31 @@ import { ListStyled } from './List.styled';
 export const List: FC = () => {
   const { data, loading, error } = useQuery<Ships>(SHIPS_QUERY);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  const getContent = () => {
+    if (loading) {
+      return <Loader />;
+    }
 
-  if (error) {
-    return <p>{error.message}</p>;
-  }
+    if (error) {
+      return <Title>{error.message}</Title>;
+    }
 
-  if (!data?.ships) {
-    return <p>Empty list</p>;
-  }
+    if (!data?.ships) {
+      return <Title>No ships have been added yet</Title>;
+    }
 
-  return (
-    <ListStyled>
-      {data.ships.map((ship) => (
-        <Link key={ship.id} href={`/ship/${ship.id}`}>
-          <Item ship={ship} />
-        </Link>
-      ))}
-    </ListStyled>
-  );
+    return (
+      <div className="grid">
+        {data.ships.map((ship) => (
+          <Link key={ship.id} href={`/ship/${ship.id}`}>
+            <Item ship={ship} />
+          </Link>
+        ))}
+      </div>
+    );
+  };
+
+  return <ListStyled>{getContent()}</ListStyled>;
 };
 
 export default List;

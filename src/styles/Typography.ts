@@ -23,7 +23,7 @@ export const BodyM = styled.p<TypographyProps>`
 `
 
 export const BodyS = styled.p<TypographyProps>` 
-  font-size: 0.625rem; //14
+  font-size: 0.77rem; //14
   line-height: 1.5;
   color: ${({ theme, color }) => color ?? theme.textPrimary};
   font-weight: ${({ weight }) => weight ?? 500};
