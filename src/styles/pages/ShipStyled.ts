@@ -1,18 +1,17 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { breakpoints } from '../../constants/breakpoints';
+import { breakpoints } from '../../constants/breakpoints'
 
 const ShipStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
   width: 100%;
-`;
+`
 
 interface ShipDataStyledProps {
-  bgImage: string;
+  bgImage: string
 }
 
 const ShipDataStyled = styled.div<ShipDataStyledProps>`
@@ -128,6 +127,6 @@ const ShipDataStyled = styled.div<ShipDataStyledProps>`
       margin-top: 0.5rem;
     }
   }
-`;
+`
 
 export { ShipStyled, ShipDataStyled }

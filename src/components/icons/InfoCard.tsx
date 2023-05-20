@@ -1,8 +1,6 @@
-import React, { FC } from 'react';
+import React, { FC } from 'react'
 
-import { theme } from '../../constants/theme';
-
-import { Icon } from '../../interfaces/ui';
+import { Icon } from '../../interfaces/ui'
 
 const InfoCard: FC<Icon> = ({ className }) => (
   <svg
@@ -23,6 +21,6 @@ const InfoCard: FC<Icon> = ({ className }) => (
       fill="white"
     />
   </svg>
-);
+)
 
-export default InfoCard;
+export default InfoCard

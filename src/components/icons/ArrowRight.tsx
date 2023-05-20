@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import React, { FC } from 'react'
 
-import { theme } from '../../constants/theme';
+import { theme } from '../../constants/theme'
 
-import { Icon } from '../../interfaces/ui';
+import { Icon } from '../../interfaces/ui'
 
 const ArrowRight: FC<Icon> = ({ color = theme.textPrimary, className }) => (
   <svg
@@ -20,6 +20,6 @@ const ArrowRight: FC<Icon> = ({ color = theme.textPrimary, className }) => (
       fill={color}
     />
   </svg>
-);
+)
 
-export default ArrowRight;
+export default ArrowRight

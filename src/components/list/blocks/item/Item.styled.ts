@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 interface ItemStyledProps {
-  bgImage: string;
+  bgImage?: string
 }
 
 export const ItemStyled = styled.div<ItemStyledProps>`
@@ -31,4 +31,4 @@ export const ItemStyled = styled.div<ItemStyledProps>`
     align-items: center;
     padding: 1rem 1.5rem;
   }
-`;
+`

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const NotFoundStyled = styled.div`
   display: flex;
@@ -9,6 +9,6 @@ const NotFoundStyled = styled.div`
   .title {
     text-align: center;
   }
-`;
+`
 
 export default NotFoundStyled

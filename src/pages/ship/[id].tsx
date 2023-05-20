@@ -1,47 +1,47 @@
-import { FC } from 'react';
-import { useQuery } from '@apollo/client';
-import { useRouter } from 'next/router';
-import { useTheme } from 'styled-components';
+import { FC } from 'react'
+import { useQuery } from '@apollo/client'
+import { useRouter } from 'next/router'
+import { useTheme } from 'styled-components'
 
-import { SHIP_DETAILS_QUERY } from '../../api/queries';
+import { SHIP_DETAILS_QUERY } from '../../api/queries'
 
-import ArrowLeft from '../../components/icons/ArrowLeft';
-import ArrowCurved from '../../components/icons/ArrowCurved';
-import InfoCard from '../../components/icons/InfoCard';
+import ArrowLeft from '../../components/icons/ArrowLeft'
+import ArrowCurved from '../../components/icons/ArrowCurved'
+import InfoCard from '../../components/icons/InfoCard'
 
-import { ShipDetails } from '../../interfaces/data';
+import { ShipDetails } from '../../interfaces/data'
 
-import { Container } from '../../styles/Layout';
-import { Loader } from '../../styles/Loader';
-import { Title, BodyM, BodyS } from '../../styles/Typography';
-import { ShipStyled, ShipDataStyled } from '../../styles/pages/ShipStyled';
-import { Button } from '../../styles/Button';
+import { Container } from '../../styles/Layout'
+import { Loader } from '../../styles/Loader'
+import { Title, BodyM, BodyS } from '../../styles/Typography'
+import { ShipStyled, ShipDataStyled } from '../../styles/pages/ShipStyled'
+import { Button } from '../../styles/Button'
 
 export const Ship: FC = () => {
-  const theme = useTheme();
-  const router = useRouter();
+  const theme = useTheme()
+  const router = useRouter()
 
   const {
     query: { id },
-  } = router;
+  } = router
 
   const { data, loading, error } = useQuery<ShipDetails>(SHIP_DETAILS_QUERY, {
     variables: { id },
-  });
+  })
 
-  const handleBack = () => router.back();
+  const handleBack = () => router.back()
 
   const getContent = () => {
     if (loading) {
-      return <Loader />;
+      return <Loader />
     }
 
     if (error) {
-      return <Title>{error.message}</Title>;
+      return <Title>{error.message}</Title>
     }
 
     if (!data?.ship) {
-      return <Title>There are no details for this ship</Title>;
+      return <Title>There are no details for this ship</Title>
     }
 
     return (
@@ -153,10 +153,10 @@ export const Ship: FC = () => {
           </div>
         </Container>
       </ShipDataStyled>
-    );
-  };
+    )
+  }
 
-  return <ShipStyled>{getContent()}</ShipStyled>;
-};
+  return <ShipStyled>{getContent()}</ShipStyled>
+}
 
-export default Ship;
+export default Ship

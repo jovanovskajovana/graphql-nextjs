@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { breakpoints } from '../../constants/breakpoints';
+import { breakpoints } from '../../constants/breakpoints'
 
 const HomeStyled = styled.div`
   width: 100%;
@@ -19,6 +19,6 @@ const HomeStyled = styled.div`
       margin-bottom: 1.5rem;
     }
   }
-`;
+`
 
 export default HomeStyled

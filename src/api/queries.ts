@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from '@apollo/client'
 
 export const SHIP = gql`
   fragment shipData on Ship {
@@ -7,7 +7,7 @@ export const SHIP = gql`
     name
     type
   }
-`;
+`
 
 export const SHIPS_QUERY = gql`
   query shipsQuery {
@@ -16,7 +16,7 @@ export const SHIPS_QUERY = gql`
     }
   }
   ${SHIP}
-`;
+`
 
 export const SHIP_DETAILS_QUERY = gql`
   query shipDetailsQuery($id: ID!) {
