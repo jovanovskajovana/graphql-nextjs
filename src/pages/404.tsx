@@ -13,13 +13,7 @@ export const NotFound: FC = () => {
 
   return (
     <NotFoundStyled>
-      <Container
-        column
-        mobileColumn
-        alignItems="center"
-        justifyContent="center"
-        gap="1.5rem"
-      >
+      <Container column mobileColumn alignItems="center" justifyContent="center" gap="1.5rem">
         <Title className="title">Oops, where did this page come from?</Title>
         <Link href="/">
           <BodyM fontFamily={theme.fontSecondary}>

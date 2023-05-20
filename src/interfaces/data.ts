@@ -7,10 +7,12 @@ export interface Ship {
   year_built?: number
   class?: string
   home_port?: string
-  missions?: {
-    flight: string
-    name: string
-  }
+  missions?: Mission[]
+}
+
+export interface Mission {
+  name: string
+  flight: string
 }
 
 export interface Ships {

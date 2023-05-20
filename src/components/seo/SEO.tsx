@@ -19,10 +19,7 @@ const SEO: FC<SEOProps> = ({ title, description }) => (
       rel="stylesheet"
     />
     <link rel="icon" href="/favicon.ico" />
-    <meta
-      name="description"
-      content={description || 'Test app build with Next.js'}
-    />
+    <meta name="description" content={description || 'Test app build with Next.js'} />
     <title>{title || 'Next.js plus GraphQL'}</title>
   </Head>
 )

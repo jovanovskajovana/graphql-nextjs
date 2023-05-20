@@ -59,10 +59,7 @@ export const Ship: FC = () => {
         <Container column mobileColumn alignItems="center">
           <div className="section basic-info">
             <div className="section-title">
-              <BodyM
-                fontFamily={theme.fontSecondary}
-                color={theme.textHighlight}
-              >
+              <BodyM fontFamily={theme.fontSecondary} color={theme.textHighlight}>
                 Basic info
               </BodyM>
               <ArrowCurved className="icon" color={theme.textHighlight} />
@@ -70,10 +67,7 @@ export const Ship: FC = () => {
             {data.ship.year_built && (
               <div className="info-card">
                 <div className="info-card-text">
-                  <BodyM
-                    fontFamily={theme.fontSecondary}
-                    color={theme.textSecondary}
-                  >
+                  <BodyM fontFamily={theme.fontSecondary} color={theme.textSecondary}>
                     Year built
                   </BodyM>
                   <BodyM weight={700}>{data.ship.year_built}</BodyM>
@@ -84,10 +78,7 @@ export const Ship: FC = () => {
             {data.ship.weight_kg && (
               <div className="info-card">
                 <div className="info-card-text">
-                  <BodyM
-                    fontFamily={theme.fontSecondary}
-                    color={theme.textSecondary}
-                  >
+                  <BodyM fontFamily={theme.fontSecondary} color={theme.textSecondary}>
                     Weight
                   </BodyM>
                   <BodyM weight={700}>{data.ship.weight_kg} kg</BodyM>
@@ -98,10 +89,7 @@ export const Ship: FC = () => {
             {data.ship.class && (
               <div className="info-card">
                 <div className="info-card-text">
-                  <BodyM
-                    fontFamily={theme.fontSecondary}
-                    color={theme.textSecondary}
-                  >
+                  <BodyM fontFamily={theme.fontSecondary} color={theme.textSecondary}>
                     Class
                   </BodyM>
                   <BodyM weight={700}>{data.ship.class}</BodyM>
@@ -112,10 +100,7 @@ export const Ship: FC = () => {
             {data.ship.home_port && (
               <div className="info-card">
                 <div className="info-card-text">
-                  <BodyM
-                    fontFamily={theme.fontSecondary}
-                    color={theme.textSecondary}
-                  >
+                  <BodyM fontFamily={theme.fontSecondary} color={theme.textSecondary}>
                     Home port
                   </BodyM>
                   <BodyM weight={700}>{data.ship.home_port}</BodyM>
@@ -127,10 +112,7 @@ export const Ship: FC = () => {
           {data.ship.missions && (
             <div className="section missions">
               <div className="section-title">
-                <BodyM
-                  fontFamily={theme.fontSecondary}
-                  color={theme.textHighlight}
-                >
+                <BodyM fontFamily={theme.fontSecondary} color={theme.textHighlight}>
                   Missions
                 </BodyM>
                 <ArrowCurved className="icon" color={theme.textHighlight} />

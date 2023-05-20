@@ -19,8 +19,7 @@ export const ItemStyled = styled.div<ItemStyledProps>`
 
   .cover {
     background-color: ${({ theme }) => theme.backgroundSecondary};
-    background-image: ${({ bgImage }) =>
-      bgImage ? `url(${bgImage})` : `url(${bgImagePlaceholder.src})`};
+    background-image: ${({ bgImage }) => (bgImage ? `url(${bgImage})` : `url(${bgImagePlaceholder.src})`)};
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
