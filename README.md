@@ -1,5 +1,7 @@
 # Next.js with GraphQL and Apollo Client
 
+> [Preview](https://graphql-nextjs.netlify.app/)
+
 After cloning this repo, run `yarn` to install all dependencies. Then use:
 
 #### `yarn dev`
