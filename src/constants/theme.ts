@@ -8,7 +8,7 @@ const colors = {
   transparent: 'transparent',
 }
 
-interface Theme {
+export interface Theme {
   // font
   fontPrimary: string
   fontSecondary: string

@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import bgImagePlaceholder from '../../assets/images/no-image.png'
+
 import { breakpoints } from '../../constants/breakpoints'
 
 const ShipStyled = styled.div`
@@ -11,7 +13,7 @@ const ShipStyled = styled.div`
 `
 
 interface ShipDataStyledProps {
-  bgImage: string
+  bgImage?: string
 }
 
 const ShipDataStyled = styled.div<ShipDataStyledProps>`
@@ -34,7 +36,8 @@ const ShipDataStyled = styled.div<ShipDataStyledProps>`
 
   .cover-img {
     background-color: ${({ theme }) => theme.backgroundSecondary};
-    background-image: ${({ bgImage }) => `url(${bgImage})`};
+    background-image: ${({ bgImage }) =>
+      bgImage ? `url(${bgImage})` : `url(${bgImagePlaceholder.src})`};
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
