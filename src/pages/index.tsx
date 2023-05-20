@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { FC } from 'react'
 
-import List from '../components/list/List';
+import List from '../components/list/List'
 
-import { Container } from '../styles/Layout';
-import { Title } from '../styles/Typography';
-import HomeStyled from '../styles/pages/HomeStyled';
+import { Container } from '../styles/Layout'
+import { Title } from '../styles/Typography'
+import HomeStyled from '../styles/pages/HomeStyled'
 
 export const Home: FC = () => (
   <HomeStyled>
@@ -13,6 +13,6 @@ export const Home: FC = () => (
       <List />
     </Container>
   </HomeStyled>
-);
+)
 
-export default Home;
+export default Home

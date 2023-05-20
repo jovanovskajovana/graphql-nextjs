@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { breakpoints } from '../constants/breakpoints';
+import { breakpoints } from '../constants/breakpoints'
 
 export const PageLayout = styled.div`
   display: flex;
@@ -8,17 +8,17 @@ export const PageLayout = styled.div`
   color: ${({ theme }) => theme.textPrimary};
   width: 100%;
   min-height: 100vh;
-`;
+`
 
 interface ContainerProps {
-  column?: boolean;
-  alignItems?: string;
-  justifyContent?: string;
-  gap?: string;
-  maxWidth?: string;
-  mobileColumn?: boolean;
-  mobileJustifyContent?: string;
-  mobileAlignItems?: string;
+  column?: boolean
+  alignItems?: string
+  justifyContent?: string
+  gap?: string
+  maxWidth?: string
+  mobileColumn?: boolean
+  mobileJustifyContent?: string
+  mobileAlignItems?: string
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -36,4 +36,4 @@ export const Container = styled.div<ContainerProps>`
     justify-content: ${({ mobileJustifyContent }) => mobileJustifyContent};
     align-items: ${({ mobileAlignItems }) => mobileAlignItems};
   }
-`;
+`

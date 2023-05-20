@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components'
 
 const rotate = keyframes`
   0% {
@@ -16,4 +16,4 @@ export const Loader = styled.div`
   border-bottom-color: ${({ theme }) => theme.loaderBorderActive};
   border-radius: 50%;
   animation: ${rotate} 1s linear infinite;
-`;
+`

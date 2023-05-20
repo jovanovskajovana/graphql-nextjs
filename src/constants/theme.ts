@@ -1,34 +1,34 @@
 const colors = {
-  black: "#1e1e1e",
-  white: "#fff",
-  grey: "#919cb4",
-  blue_3: "#233869",
-  blue_2: "#d3d7e1",
-  blue_1: "#f7f8fB",
-  transparent: "transparent",
-};
+  black: '#1e1e1e',
+  white: '#fff',
+  grey: '#919cb4',
+  blue_3: '#233869',
+  blue_2: '#d3d7e1',
+  blue_1: '#f7f8fB',
+  transparent: 'transparent',
+}
 
-interface Theme {
+export interface Theme {
   // font
-  fontPrimary: string;
-  fontSecondary: string;
+  fontPrimary: string
+  fontSecondary: string
   // background
-  backgroundPrimary: string;
-  backgroundSecondary: string;
-  backgroundLight: string;
+  backgroundPrimary: string
+  backgroundSecondary: string
+  backgroundLight: string
   // text
-  textPrimary: string;
-  textSecondary: string;
-  textHighlight: string;
+  textPrimary: string
+  textSecondary: string
+  textHighlight: string
   // loader
-  loaderBorder: string;
-  loaderBorderActive: string;
+  loaderBorder: string
+  loaderBorderActive: string
 }
 
 export const theme: Theme = {
   // font
-  fontPrimary: "Nunito",
-  fontSecondary: "Indie Flower",
+  fontPrimary: 'Nunito',
+  fontSecondary: 'Indie Flower',
   // background
   backgroundPrimary: colors.blue_1,
   backgroundSecondary: colors.grey,
@@ -40,5 +40,4 @@ export const theme: Theme = {
   // loader
   loaderBorder: colors.blue_2,
   loaderBorderActive: colors.blue_3,
-};
-
+}

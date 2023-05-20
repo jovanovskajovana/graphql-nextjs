@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import { HEADER_HEIGHT } from '../../constants/ui'
-import { breakpoints } from '../../constants/breakpoints';
+import { breakpoints } from '../../constants/breakpoints'
 
 export const ListStyled = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const ListStyled = styled.div`
   justify-content: center;
   width: 100%;
   min-height: calc(100vh - ${HEADER_HEIGHT});
- 
+
   .grid {
     display: grid;
     column-gap: 4rem;
@@ -25,4 +25,4 @@ export const ListStyled = styled.div`
       row-gap: 1rem;
     }
   }
-`;
+`
