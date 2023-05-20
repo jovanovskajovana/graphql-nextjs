@@ -1,24 +1,24 @@
-import { FC } from 'react';
-import { useTheme } from 'styled-components';
+import { FC } from 'react'
+import { useTheme } from 'styled-components'
 
-import ArrowRight from '../../../icons/ArrowRight';
+import ArrowRight from '../../../icons/ArrowRight'
 
-import { Ship } from '../../../../interfaces/data';
+import { Ship } from '../../../../interfaces/data'
 
-import { BodyM, BodyS } from '../../../../styles/Typography';
-import { Button } from '../../../../styles/Button';
+import { BodyM, BodyS } from '../../../../styles/Typography'
+import { Button } from '../../../../styles/Button'
 
-import { ItemStyled } from './Item.styled';
+import { ItemStyled } from './Item.styled'
 
 interface ItemProps {
-  ship: Ship;
+  ship: Ship
 }
 
 /**
  * A list item to be used in the ships list.
  */
 export const Item: FC<ItemProps> = ({ ship }) => {
-  const theme = useTheme();
+  const theme = useTheme()
 
   return (
     <ItemStyled bgImage={ship.image}>
@@ -33,7 +33,7 @@ export const Item: FC<ItemProps> = ({ ship }) => {
         </Button>
       </div>
     </ItemStyled>
-  );
-};
+  )
+}
 
-export default Item;
+export default Item

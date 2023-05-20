@@ -1,18 +1,19 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { breakpoints } from '../../constants/breakpoints';
+import bgImagePlaceholder from '../../assets/images/no-image.png'
+
+import { breakpoints } from '../../constants/breakpoints'
 
 const ShipStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
   width: 100%;
-`;
+`
 
 interface ShipDataStyledProps {
-  bgImage: string;
+  bgImage?: string
 }
 
 const ShipDataStyled = styled.div<ShipDataStyledProps>`
@@ -35,7 +36,7 @@ const ShipDataStyled = styled.div<ShipDataStyledProps>`
 
   .cover-img {
     background-color: ${({ theme }) => theme.backgroundSecondary};
-    background-image: ${({ bgImage }) => `url(${bgImage})`};
+    background-image: ${({ bgImage }) => (bgImage ? `url(${bgImage})` : `url(${bgImagePlaceholder.src})`)};
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -128,6 +129,6 @@ const ShipDataStyled = styled.div<ShipDataStyledProps>`
       margin-top: 0.5rem;
     }
   }
-`;
+`
 
 export { ShipStyled, ShipDataStyled }

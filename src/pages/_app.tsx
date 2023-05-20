@@ -1,11 +1,11 @@
-import { AppProps } from 'next/app';
-import withApollo from 'next-with-apollo';
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import { AppProps } from 'next/app'
+import withApollo from 'next-with-apollo'
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 
-import Page from '../components/page/Page';
+import Page from '../components/page/Page'
 
 interface WithApolloProps extends AppProps {
-  apollo: ApolloClient<Cache>;
+  apollo: ApolloClient<Cache>
 }
 
 const App = ({ Component, pageProps, apollo }: WithApolloProps) => (
@@ -14,7 +14,7 @@ const App = ({ Component, pageProps, apollo }: WithApolloProps) => (
       <Component {...pageProps} />
     </Page>
   </ApolloProvider>
-);
+)
 
 export default withApollo(
   ({ initialState }) =>
@@ -22,4 +22,4 @@ export default withApollo(
       uri: process.env.NEXT_PUBLIC_API_URL,
       cache: new InMemoryCache().restore(initialState || {}),
     })
-)(App);
+)(App)

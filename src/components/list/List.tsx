@@ -1,35 +1,35 @@
-import { FC } from 'react';
-import Link from 'next/link';
-import { useQuery } from '@apollo/client';
+import { FC } from 'react'
+import Link from 'next/link'
+import { useQuery } from '@apollo/client'
 
-import { SHIPS_QUERY } from '../../api/queries';
+import { SHIPS_QUERY } from '../../api/queries'
 
-import { Ships } from '../../interfaces/data';
+import { Ships } from '../../interfaces/data'
 
-import { Loader } from '../../styles/Loader';
-import { Title } from '../../styles/Typography';
+import { Loader } from '../../styles/Loader'
+import { Title } from '../../styles/Typography'
 
-import Item from './blocks/item/Item';
-import { ListStyled } from './List.styled';
+import Item from './blocks/item/Item'
+import { ListStyled } from './List.styled'
 
 /**
  * A component listing every ship item, or
  * empty, loading, and error state accordingly.
  */
 export const List: FC = () => {
-  const { data, loading, error } = useQuery<Ships>(SHIPS_QUERY);
+  const { data, loading, error } = useQuery<Ships>(SHIPS_QUERY)
 
   const getContent = () => {
     if (loading) {
-      return <Loader />;
+      return <Loader />
     }
 
     if (error) {
-      return <Title>{error.message}</Title>;
+      return <Title>{error.message}</Title>
     }
 
     if (!data?.ships) {
-      return <Title>No ships have been added yet</Title>;
+      return <Title>No ships have been added yet</Title>
     }
 
     return (
@@ -40,10 +40,10 @@ export const List: FC = () => {
           </Link>
         ))}
       </div>
-    );
-  };
+    )
+  }
 
-  return <ListStyled>{getContent()}</ListStyled>;
-};
+  return <ListStyled>{getContent()}</ListStyled>
+}
 
-export default List;
+export default List
